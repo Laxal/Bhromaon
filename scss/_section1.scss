@@ -1,0 +1,129 @@
+.section1 {
+    padding: var(--pd-section) 0;
+    background: url(/assets/img/section1-bg.jpg) center bottom / cover no-repeat;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+    }
+    &-description {
+        flex: 0 0 50%;
+        padding: 80px 15px 0 0;
+
+        &__title {
+            font-size: 36px;
+            line-height: 1;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Aleo";
+            margin-bottom: 55px;
+        }
+        &__text {
+            font-size: 16px;
+            letter-spacing: 2px;
+            line-height: 1.65em;
+            color: #e8e8e8;
+            font-weight: 400;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &-images {
+        flex: 0 0 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 80px;
+
+        &__image {
+            max-width: 350px;
+            width: 100%;
+            img {
+                max-width: 350px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            &:nth-child(odd) {
+                align-self: flex-start;
+            }
+            &:nth-child(even) {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        background: url(/assets/img/section1-bg-M.jpg) center bottom / cover no-repeat;
+
+        &-images {
+            padding-left: 25px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 100px 0;
+
+        &-description {
+            padding-top: 30px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 50px 0;
+
+        &-container {
+            flex-direction: column-reverse;
+        }
+
+        &-description {
+            padding-top: 30px;
+            padding-right: 0;
+
+            &__title {
+                text-align: center;
+            }
+
+            &__button-link {
+                margin: 0 auto;
+            }
+        }
+
+        &-images {
+            flex-direction: row;
+            padding: 0;
+
+            &__image {
+                &:not(:last-child) {
+                    margin: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        padding: 30px 0;
+
+        &-description {
+            padding-top: 15px;
+
+            &__title {
+                margin-bottom: 30px;
+            }
+            &__text {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

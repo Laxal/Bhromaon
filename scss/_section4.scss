@@ -1,0 +1,27 @@
+.section4 {
+    position: relative;
+    background: url(/assets/img/section4-bg.jpg) center top/cover no-repeat;
+    padding: 230px 0 100px 0;
+
+    &-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 150px 0 70px 0;
+        background: url(/assets/img/section4-bg-M.jpg) center top/cover no-repeat;
+    }
+
+    @media screen and (max-width: 575px) {
+        padding: 0;
+
+        &-container {
+            padding: 0;
+        }
+
+        &-hotel-block {
+            padding: 100px 20px 70px 20px;
+        }
+    }
+}
